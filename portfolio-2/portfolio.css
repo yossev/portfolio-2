@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "PT Serif", serif;
+  }
+  
+  header {
+    margin-bottom: 30px;
+    height: 3rem;
+    background: inherit;
+    font-size: 2rem;
+    
+    display: flex;
+    align-items: center;
+    
+    padding: .2rem 3rem;
+  }
+  header nav {
+    margin-top: 20px;
+    display: flex;
+    gap: .8rem;
+  }
+  
+  .spacer {
+    flex: 1;
+  }
+
+.name-title{
+    color: #000;
+    font-size: 30px;
+    font-weight: 900 !important;
+    margin-top: 25px !important;
+    transition: opacity 0.3s ease-in;
+}
+.name-title:hover{
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.github-icon{
+    color: #000;
+    margin-top: 7px !important;
+    transition: opacity 0.3s ease-in;
+}
+.github-icon:hover{
+    opacity: 70%;
+}
+.linkedin-icon{
+    margin-top: 7px !important;
+    transition: opacity 0.3s ease-in;
+}
+.linkedin-icon:hover{
+    opacity: 70%;
+}
+
+/* Remove that annoying purple color */
+
+a:visited, a:hover, a:focus {
+    text-decoration: none;
+    color: #000;
+}
+
+  .glow-on-hover {
+    width: 150px;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-size: large;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+hr{
+    opacity: 30%;
+}
+
+.projects-box{
+    display: flex;
+    margin: 10px;
+}
+
+.fx2 .item {
+    padding: 0;
+    margin: px 0;
+    position: relative; /* Add this to .fx2 .item to allow absolute positioning inside */
+}
+
+.fx2 .item img {
+    padding: 0;
+    display: block;
+    max-width: 30%; /* Adjust the max-width as per your preference */
+    max-height: 30%; /* Adjust the max-height as per your preference */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.fx2 a .item h4,
+.fx2 a .item p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Move the transition property here */
+}
+
+.fx2 a:hover .item img,
+.fx2 a:focus .item img {
+    opacity: 0.9;
+    transform: scale(0.95);
+}
+
+.fx2 a:hover .item h4,
+.fx2 a:focus .item h4,
+.fx2 a:hover .item p,
+.fx2 a:focus .item p {
+    opacity: 1;
+}
+
+.projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    
+    font-family: "PT Serif", serif !important;
+  }
+  
+  header {
+    margin-bottom: 30px;
+    height: 3rem;
+    background: inherit;
+    font-size: 2rem;
+    
+    display: flex;
+    align-items: center;
+    
+    padding: .2rem 3rem;
+  }
+  
+  header nav {
+    margin-top: 20px;
+    display: flex;
+    gap: .8rem;
+  }
+  
+  .spacer {
+    flex: 1;
+  }
+
+.name-title{
+    color: #000;
+    font-size: 30px;
+    font-weight: 900 !important;
+    margin-top: 25px !important;
+    transition: opacity 0.3s ease-in;
+}
+.name-title:hover{
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.github-icon{
+    color: #000;
+    margin-top: 7px !important;
+    transition: opacity 0.3s ease-in;
+}
+.github-icon:hover{
+    opacity: 70%;
+}
+.linkedin-icon{
+    margin-top: 7px !important;
+    transition: opacity 0.3s ease-in;
+}
+.linkedin-icon:hover{
+    opacity: 70%;
+}
+
+/* Remove that annoying purple color */
+
+a:visited, a:hover, a:focus {
+    text-decoration: none;
+    color: #000;
+}
+
+  .glow-on-hover {
+    width: 150px;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-size: large;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+hr{
+    opacity: 30%;
+}
+
+
+/* Main Bio CSS */
+
+.main-bio{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+.small-bio{
+    font-size: large;
+    margin-bottom: 15px;
+}
+img{
+    width: 200px;
+    height: auto;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.substack-button{
+    margin-bottom: 20px;
+}
+
+.portfolio-link{
+    color: #000;
+    text-decoration: none;
+}
